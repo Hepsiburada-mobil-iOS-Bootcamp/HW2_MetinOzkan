@@ -15,7 +15,7 @@ protocol ActionButtonDelegate : AnyObject{
 
 class ActionButton:GenericBaseView<ActionButtonData>{
     
-    weak var delegate:ActionButtonDelegate?
+//    weak var delegate:ActionButtonDelegate?
     
     
     private lazy var shadowView:UIView = {
@@ -123,7 +123,11 @@ class ActionButton:GenericBaseView<ActionButtonData>{
         }
     }
     
-    
+   private func pressedButtonAction(){
+        
+        guard let data = returnData()  else{ return}
+        data.actionButtonListener?()
+    }
     
     
 }
@@ -149,7 +153,8 @@ extension ActionButton: UIGestureRecognizerDelegate{
                 
                 print("clicked")
                 
-                self.delegate?.actionButtonPressed()
+//                self.delegate?.actionButtonPressed()
+                self.pressedButtonAction() 
             }
         }
         
