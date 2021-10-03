@@ -8,9 +8,9 @@
 import UIKit
 
 
-class ActionButton:BaseView{
+class ActionButton:GenericBaseView<ActionButtonData>{
     
-    private let data:ActionButtonData
+    
     
     private lazy var containerView:UIView = {
         
@@ -36,20 +36,13 @@ class ActionButton:BaseView{
     }()
     
     
-    init(frame: CGRect,data:ActionButtonData) {
-        self.data=data
-        super.init(frame: frame)
-        
-    }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+    
+    
     
     override func addMajorViewComponents() {
         super.addMajorViewComponents()
         addContainerView()
-        loadData()
     }
     
     private func addContainerView(){
@@ -71,13 +64,16 @@ class ActionButton:BaseView{
         
     }
     
-    func loadData(){
+    override func loadDataView() {
+        super.loadDataView()
+        guard let data=returnData() else {return}
+        
         infoTitle.text=data.text
         
         switch data.buttonType {
         case .filled(let theme):
             containerView.backgroundColor = theme.value
-            infoTitle.textColor = .white 
+            infoTitle.textColor = .white
         case .outlined(let theme):
             containerView.layer.borderWidth = 1
             containerView.layer.borderColor = theme.value.cgColor
@@ -86,6 +82,21 @@ class ActionButton:BaseView{
         }
     }
     
+    //    func loadData(){
+    //        infoTitle.text=data.text
+    //
+    //        switch data.buttonType {
+    //        case .filled(let theme):
+    //            containerView.backgroundColor = theme.value
+    //            infoTitle.textColor = .white
+    //        case .outlined(let theme):
+    //            containerView.layer.borderWidth = 1
+    //            containerView.layer.borderColor = theme.value.cgColor
+    //            containerView.backgroundColor = .white
+    //            infoTitle.textColor = theme.value
+    //        }
+    //    }
+    //
     
     
     

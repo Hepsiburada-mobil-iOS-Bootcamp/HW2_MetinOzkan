@@ -22,6 +22,7 @@
 		BF40198B27058C8300EE07A6 /* ActionButtonTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF40198A27058C8300EE07A6 /* ActionButtonTheme.swift */; };
 		BF853D4A2705729B00C52CFE /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF853D492705729B00C52CFE /* FontManager.swift */; };
 		BF853D4C270572BE00C52CFE /* GenericValueProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF853D4B270572BE00C52CFE /* GenericValueProtocol.swift */; };
+		BF98C4F12709F53D00CCCEA2 /* GenericBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF98C4F02709F53D00CCCEA2 /* GenericBaseView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		BF40198A27058C8300EE07A6 /* ActionButtonTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtonTheme.swift; sourceTree = "<group>"; };
 		BF853D492705729B00C52CFE /* FontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
 		BF853D4B270572BE00C52CFE /* GenericValueProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericValueProtocol.swift; sourceTree = "<group>"; };
+		BF98C4F02709F53D00CCCEA2 /* GenericBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericBaseView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				BF1E46B92702E09E00C5421B /* BaseView.swift */,
+				BF98C4F02709F53D00CCCEA2 /* GenericBaseView.swift */,
 			);
 			path = BaseComponent;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				BF1E468327023D7B00C5421B /* AppDelegate.swift in Sources */,
 				BF40198827058C5F00EE07A6 /* ActionButtonType.swift in Sources */,
 				BF1E46BA2702E09E00C5421B /* BaseView.swift in Sources */,
+				BF98C4F12709F53D00CCCEA2 /* GenericBaseView.swift in Sources */,
 				BF1E468527023D7B00C5421B /* SceneDelegate.swift in Sources */,
 				BF853D4A2705729B00C52CFE /* FontManager.swift in Sources */,
 				BF40198627057ECA00EE07A6 /* ActionButtonData.swift in Sources */,
