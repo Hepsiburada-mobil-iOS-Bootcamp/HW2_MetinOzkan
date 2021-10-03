@@ -23,6 +23,7 @@
 		BF853D4A2705729B00C52CFE /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF853D492705729B00C52CFE /* FontManager.swift */; };
 		BF853D4C270572BE00C52CFE /* GenericValueProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF853D4B270572BE00C52CFE /* GenericValueProtocol.swift */; };
 		BF98C4F12709F53D00CCCEA2 /* GenericBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF98C4F02709F53D00CCCEA2 /* GenericBaseView.swift */; };
+		BF98C4F4270A07F200CCCEA2 /* UIView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF98C4F3270A07F200CCCEA2 /* UIView + Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		BF853D492705729B00C52CFE /* FontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
 		BF853D4B270572BE00C52CFE /* GenericValueProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericValueProtocol.swift; sourceTree = "<group>"; };
 		BF98C4F02709F53D00CCCEA2 /* GenericBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericBaseView.swift; sourceTree = "<group>"; };
+		BF98C4F3270A07F200CCCEA2 /* UIView + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,10 +180,19 @@
 		BF853D482705727C00C52CFE /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				BF98C4F2270A07D400CCCEA2 /* Extensions */,
 				BF853D492705729B00C52CFE /* FontManager.swift */,
 				BF853D4B270572BE00C52CFE /* GenericValueProtocol.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		BF98C4F2270A07D400CCCEA2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BF98C4F3270A07F200CCCEA2 /* UIView + Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,6 +329,7 @@
 				BF40198B27058C8300EE07A6 /* ActionButtonTheme.swift in Sources */,
 				BF1E468327023D7B00C5421B /* AppDelegate.swift in Sources */,
 				BF40198827058C5F00EE07A6 /* ActionButtonType.swift in Sources */,
+				BF98C4F4270A07F200CCCEA2 /* UIView + Extensions.swift in Sources */,
 				BF1E46BA2702E09E00C5421B /* BaseView.swift in Sources */,
 				BF98C4F12709F53D00CCCEA2 /* GenericBaseView.swift in Sources */,
 				BF1E468527023D7B00C5421B /* SceneDelegate.swift in Sources */,
