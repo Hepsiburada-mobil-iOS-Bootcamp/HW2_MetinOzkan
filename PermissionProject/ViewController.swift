@@ -21,13 +21,16 @@ class ViewController: UIViewController {
         
         
         DispatchQueue.main.asyncAfter(deadline: .now()+3){
-            self.actionButton.setData(by:ActionButtonData(text: "OK setData", buttonType: .filled(.smooth)))
+            self.actionButton.setData(by:ActionButtonData(text: "OK", buttonType: .filled(.smooth)))
         }
      }
 
     private func addActionButton() {
         actionButton=ActionButton()
         actionButton.translatesAutoresizingMaskIntoConstraints=false
+        
+        actionButton.delegate = self
+        
         view.addSubview(actionButton)
         
         NSLayoutConstraint.activate([
@@ -56,3 +59,9 @@ class ViewController: UIViewController {
     
 }
 
+extension ViewController:ActionButtonDelegate{
+    func actionButtonPressed() {
+        print("viewControll is inforned")
+    }
+    
+}

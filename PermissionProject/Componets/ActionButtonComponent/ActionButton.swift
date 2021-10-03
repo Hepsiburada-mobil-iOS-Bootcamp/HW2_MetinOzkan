@@ -7,8 +7,15 @@
 
 import UIKit
 
+protocol ActionButtonDelegate : AnyObject{
+    func actionButtonPressed ()
+}
+
+
 
 class ActionButton:GenericBaseView<ActionButtonData>{
+    
+    weak var delegate:ActionButtonDelegate?
     
     
     private lazy var shadowView:UIView = {
@@ -134,13 +141,18 @@ extension ActionButton: UIGestureRecognizerDelegate{
     }
     
     @objc fileprivate func buttonTapped(_ sender : UITapGestureRecognizer){
-        
+        isUserInteractionEnabled = false
         startTappedAnimation { finish in
             if finish {
+                
+                self.isUserInteractionEnabled = true
+                
                 print("clicked")
+                
+                self.delegate?.actionButtonPressed()
             }
         }
-
+        
     }
     
 }
