@@ -28,7 +28,7 @@ class ActionButton:GenericBaseView<ActionButtonData>{
         let temp=UILabel()
         temp.translatesAutoresizingMaskIntoConstraints=false
         temp.font=FontManager.bold(14).value
-        temp.text="Buttonas"
+        temp.text="OK"
         temp.contentMode = .center
         temp.textAlignment = .center
         return temp
