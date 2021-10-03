@@ -12,6 +12,15 @@ class ViewController: UIViewController {
     private var actionButton:ActionButton!
     private var actionButton2:ActionButton!
 
+    @IBAction func cameraButtonTapped(_ sender: Any) {
+        print("Camera Tapped")
+        
+    }
+    
+    @IBAction func photoButtonTapped(_ sender: Any) {
+        print("Photos Tapped")
+        
+    }
     
     
     override func viewDidLoad() {
