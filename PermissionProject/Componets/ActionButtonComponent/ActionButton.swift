@@ -20,7 +20,7 @@ class ActionButton:GenericBaseView<ActionButtonData>{
         temp.layer.shadowRadius = 4
         temp.layer.shadowOpacity = 0.4
         temp.layer.cornerRadius = 6
-       
+        
         
         return temp
         
@@ -58,6 +58,14 @@ class ActionButton:GenericBaseView<ActionButtonData>{
         super.addMajorViewComponents()
         addContainerView()
     }
+    
+    
+    override func setupViewConfigurations() {
+        super.setupViewConfigurations()
+        
+        addTapGesture()
+    }
+    
     
     private func addContainerView(){
         
@@ -128,3 +136,27 @@ class ActionButton:GenericBaseView<ActionButtonData>{
 }
 
 
+//MARK: -blabla
+
+extension ActionButton: UIGestureRecognizerDelegate{
+    
+    
+    private func addTapGesture(){
+        let tap=UITapGestureRecognizer(target: self, action: .buttonTappedSelector)
+        tap.delegate = self
+        addGestureRecognizer(tap)
+    }
+    
+    @objc fileprivate func buttonTapped(_ sender : UITapGestureRecognizer){
+        
+        print("basıldı")
+        
+    }
+    
+}
+
+fileprivate extension Selector {
+    
+    static let buttonTappedSelector = #selector(ActionButton.buttonTapped)
+    
+}
