@@ -11,6 +11,20 @@ import UIKit
 class ActionButton:GenericBaseView<ActionButtonData>{
     
     
+    private lazy var shadowView:UIView = {
+        
+        let temp = UIView()
+        temp.translatesAutoresizingMaskIntoConstraints=false
+        temp.layer.shadowColor = UIColor.black.cgColor
+        temp.layer.shadowOffset =  CGSize (width: 0, height:2)
+        temp.layer.shadowRadius = 4
+        temp.layer.shadowOpacity = 0.4
+        temp.layer.cornerRadius = 6
+       
+        
+        return temp
+        
+    }()
     
     private lazy var containerView:UIView = {
         
@@ -46,15 +60,26 @@ class ActionButton:GenericBaseView<ActionButtonData>{
     }
     
     private func addContainerView(){
-        addSubview(containerView)
+        
+        
+        addSubview(shadowView)
+        shadowView.addSubview(containerView)
+        
         containerView.addSubview(infoTitle)
         
         
         NSLayoutConstraint.activate([
-            containerView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            containerView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            containerView.topAnchor.constraint(equalTo: topAnchor),
-            containerView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            shadowView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            shadowView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            shadowView.topAnchor.constraint(equalTo: topAnchor),
+            shadowView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            
+            
+            
+            containerView.leadingAnchor.constraint(equalTo: shadowView.leadingAnchor),
+            containerView.trailingAnchor.constraint(equalTo: shadowView.trailingAnchor),
+            containerView.topAnchor.constraint(equalTo: shadowView.topAnchor),
+            containerView.bottomAnchor.constraint(equalTo: shadowView.bottomAnchor),
             
             infoTitle.centerXAnchor.constraint(equalTo:containerView.centerXAnchor),
             infoTitle.centerYAnchor.constraint(equalTo:containerView.centerYAnchor)
