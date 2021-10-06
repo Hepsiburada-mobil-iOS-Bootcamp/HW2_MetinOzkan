@@ -14,21 +14,25 @@ class PermissionViewModel {
     
     private let manager:PermissionManagerProtocol
     
-    
+    private var permissionViewDismissActionBlock: VoidCompletionBlock?
     init(manager:PermissionManagerProtocol){
         self.manager = manager
     }
+    
+    func listenManagerActions(with completion: @escaping VoidCompletionBlock) {
+          permissionViewDismissActionBlock = completion
+      }
     
     func getPermissionMainViewData() ->PermissionMainViewData {
         
         return manager.getPermissionMainViewData(with: negativeListenerHandler, with: positiveListenerHandler)
         
         
-        
     }
     
     lazy var negativeListenerHandler: VoidCompletionBlock = { [weak self] in
             print("negative pressed")
+        self?.permissionViewDismissActionBlock?()
         
         }
         

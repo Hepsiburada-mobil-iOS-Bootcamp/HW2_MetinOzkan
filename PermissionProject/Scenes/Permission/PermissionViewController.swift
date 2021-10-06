@@ -24,6 +24,7 @@ class PermissionViewController: UIViewController {
         super.viewDidLoad()
 
         addPermissionMainView()
+        subsribeViewModelListeners()
     }
     
     
@@ -44,6 +45,13 @@ class PermissionViewController: UIViewController {
            ])
 
     }
+    
+    
+    private func subsribeViewModelListeners() {
+           viewModel.listenManagerActions { [weak self] in
+               self?.dismiss(animated: true, completion: nil)
+           }
+       }
     
 //    private func getPermissionViewData() -> PermissionMainViewData {
 //        return PermissionMainViewData (image: PermissionImages.camera.value, labelPackData: LabelPackComponentData(title: "Camera", subTitle:"Would you please give permission to access your camera:d"), actionModuleData: ActionModuleData(negativeButtonData: ActionButtonData(text: "Now now", buttonType: .outlined(.smooth)), positiveButtonData: ActionButtonData(text: "okey", buttonType: .filled(.smooth))))
