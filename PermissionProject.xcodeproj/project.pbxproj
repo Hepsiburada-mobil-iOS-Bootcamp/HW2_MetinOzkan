@@ -32,6 +32,9 @@
 		BF743973270E217D00A38A2D /* CameraPermissionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF743972270E217D00A38A2D /* CameraPermissionManager.swift */; };
 		BF743976270E22ED00A38A2D /* PhotosPermissionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF743975270E22ED00A38A2D /* PhotosPermissionManager.swift */; };
 		BF743979270E238B00A38A2D /* PermissionViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF743978270E238A00A38A2D /* PermissionViewFactory.swift */; };
+		BF74397C270E269E00A38A2D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF74397E270E269E00A38A2D /* Localizable.strings */; };
+		BF743981270E292E00A38A2D /* String + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF743980270E292E00A38A2D /* String + Extension.swift */; };
+		BF743984270E29B700A38A2D /* PermissionLocalizables.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF743983270E29B700A38A2D /* PermissionLocalizables.swift */; };
 		BF853D4A2705729B00C52CFE /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF853D492705729B00C52CFE /* FontManager.swift */; };
 		BF853D4C270572BE00C52CFE /* GenericValueProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF853D4B270572BE00C52CFE /* GenericValueProtocol.swift */; };
 		BF98C4F12709F53D00CCCEA2 /* GenericBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF98C4F02709F53D00CCCEA2 /* GenericBaseView.swift */; };
@@ -89,6 +92,10 @@
 		BF743972270E217D00A38A2D /* CameraPermissionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPermissionManager.swift; sourceTree = "<group>"; };
 		BF743975270E22ED00A38A2D /* PhotosPermissionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosPermissionManager.swift; sourceTree = "<group>"; };
 		BF743978270E238A00A38A2D /* PermissionViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionViewFactory.swift; sourceTree = "<group>"; };
+		BF74397D270E269E00A38A2D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BF74397F270E270A00A38A2D /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BF743980270E292E00A38A2D /* String + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Extension.swift"; sourceTree = "<group>"; };
+		BF743983270E29B700A38A2D /* PermissionLocalizables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionLocalizables.swift; sourceTree = "<group>"; };
 		BF853D492705729B00C52CFE /* FontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
 		BF853D4B270572BE00C52CFE /* GenericValueProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericValueProtocol.swift; sourceTree = "<group>"; };
 		BF98C4F02709F53D00CCCEA2 /* GenericBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericBaseView.swift; sourceTree = "<group>"; };
@@ -156,6 +163,7 @@
 				BF1E468B27023D7F00C5421B /* Assets.xcassets */,
 				BF1E468D27023D7F00C5421B /* LaunchScreen.storyboard */,
 				BF1E469027023D7F00C5421B /* Info.plist */,
+				BF74397E270E269E00A38A2D /* Localizable.strings */,
 			);
 			path = PermissionProject;
 			sourceTree = "<group>";
@@ -313,9 +321,18 @@
 			path = PermissionViewFactory;
 			sourceTree = "<group>";
 		};
+		BF743982270E299F00A38A2D /* PermissionLocalizables */ = {
+			isa = PBXGroup;
+			children = (
+				BF743983270E29B700A38A2D /* PermissionLocalizables.swift */,
+			);
+			path = PermissionLocalizables;
+			sourceTree = "<group>";
+		};
 		BF853D482705727C00C52CFE /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				BF743982270E299F00A38A2D /* PermissionLocalizables */,
 				BF678EDC270B80090087A353 /* AssestHelpers */,
 				BF98C4F2270A07D400CCCEA2 /* Extensions */,
 				BF853D492705729B00C52CFE /* FontManager.swift */,
@@ -328,6 +345,7 @@
 			isa = PBXGroup;
 			children = (
 				BF98C4F3270A07F200CCCEA2 /* UIView + Extensions.swift */,
+				BF743980270E292E00A38A2D /* String + Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -426,6 +444,7 @@
 			knownRegions = (
 				en,
 				Base,
+				tr,
 			);
 			mainGroup = BF1E467627023D7B00C5421B;
 			productRefGroup = BF1E468027023D7B00C5421B /* Products */;
@@ -445,6 +464,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF1E468F27023D7F00C5421B /* LaunchScreen.storyboard in Resources */,
+				BF74397C270E269E00A38A2D /* Localizable.strings in Resources */,
 				BF1E468C27023D7F00C5421B /* Assets.xcassets in Resources */,
 				BF1E468A27023D7B00C5421B /* Main.storyboard in Resources */,
 			);
@@ -472,6 +492,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF74396D270E106B00A38A2D /* PermissionManagerProtocol.swift in Sources */,
+				BF743984270E29B700A38A2D /* PermissionLocalizables.swift in Sources */,
 				BF1E468727023D7B00C5421B /* ViewController.swift in Sources */,
 				BF40198B27058C8300EE07A6 /* ActionButtonTheme.swift in Sources */,
 				BF1E468327023D7B00C5421B /* AppDelegate.swift in Sources */,
@@ -494,6 +515,7 @@
 				BF1E468527023D7B00C5421B /* SceneDelegate.swift in Sources */,
 				BF853D4A2705729B00C52CFE /* FontManager.swift in Sources */,
 				BF40198627057ECA00EE07A6 /* ActionButtonData.swift in Sources */,
+				BF743981270E292E00A38A2D /* String + Extension.swift in Sources */,
 				BF743973270E217D00A38A2D /* CameraPermissionManager.swift in Sources */,
 				BF1E46B72702CAA900C5421B /* ActionButton.swift in Sources */,
 				BF853D4C270572BE00C52CFE /* GenericValueProtocol.swift in Sources */,
@@ -548,6 +570,15 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		BF74397E270E269E00A38A2D /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF74397D270E269E00A38A2D /* en */,
+				BF74397F270E270A00A38A2D /* tr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -555,6 +586,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -616,6 +648,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

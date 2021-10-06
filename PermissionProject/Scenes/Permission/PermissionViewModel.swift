@@ -21,8 +21,18 @@ class PermissionViewModel {
     
     func getPermissionMainViewData() ->PermissionMainViewData {
         
-        return manager.getPermissionMainViewData()
+        return manager.getPermissionMainViewData(with: negativeListenerHandler, with: positiveListenerHandler)
+        
+        
         
     }
     
+    lazy var negativeListenerHandler: VoidCompletionBlock = { [weak self] in
+            print("negative pressed")
+        
+        }
+        
+        lazy var positiveListenerHandler: VoidCompletionBlock = { [weak self] in
+            print("positive pressed")
+        }
 }
