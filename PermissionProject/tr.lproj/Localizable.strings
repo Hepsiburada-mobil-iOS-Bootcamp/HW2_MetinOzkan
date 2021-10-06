@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  PermissionProject
+
+  Created by Metin özkan on 6.10.2021.
+  
+*/
+   
+
+
+"cameraPermissionTitle" = "Kamera Izni";
+"cameraPermissionSubTitle" = "Lutfen kameraniza erisim icin uygulamaya izin veriniz.";
+
+"photosPermissionTitle" = "Galeri Izni";
+"photosPermissionSubTitle" = "Lutfen fotograf galerinize erisim icin uygulamaya izin veriniz.";
+
+"permissionOk" = "Tamam";
+"permissionNotNow" = "Simdi Degil";
