@@ -26,6 +26,12 @@
 		BF678ED6270B72260087A353 /* PermissionMainViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF678ED5270B72260087A353 /* PermissionMainViewData.swift */; };
 		BF678EDB270B7CD60087A353 /* PermissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF678EDA270B7CD60087A353 /* PermissionViewController.swift */; };
 		BF678EDF270B80320087A353 /* PermissionImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF678EDE270B80320087A353 /* PermissionImages.swift */; };
+		BF74396B270E0D9A00A38A2D /* PermissionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF74396A270E0D9A00A38A2D /* PermissionViewModel.swift */; };
+		BF74396D270E106B00A38A2D /* PermissionManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF74396C270E106B00A38A2D /* PermissionManagerProtocol.swift */; };
+		BF743970270E12AE00A38A2D /* PermissionViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF74396F270E12AE00A38A2D /* PermissionViewBuilder.swift */; };
+		BF743973270E217D00A38A2D /* CameraPermissionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF743972270E217D00A38A2D /* CameraPermissionManager.swift */; };
+		BF743976270E22ED00A38A2D /* PhotosPermissionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF743975270E22ED00A38A2D /* PhotosPermissionManager.swift */; };
+		BF743979270E238B00A38A2D /* PermissionViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF743978270E238A00A38A2D /* PermissionViewFactory.swift */; };
 		BF853D4A2705729B00C52CFE /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF853D492705729B00C52CFE /* FontManager.swift */; };
 		BF853D4C270572BE00C52CFE /* GenericValueProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF853D4B270572BE00C52CFE /* GenericValueProtocol.swift */; };
 		BF98C4F12709F53D00CCCEA2 /* GenericBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF98C4F02709F53D00CCCEA2 /* GenericBaseView.swift */; };
@@ -77,6 +83,12 @@
 		BF678ED5270B72260087A353 /* PermissionMainViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionMainViewData.swift; sourceTree = "<group>"; };
 		BF678EDA270B7CD60087A353 /* PermissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionViewController.swift; sourceTree = "<group>"; };
 		BF678EDE270B80320087A353 /* PermissionImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionImages.swift; sourceTree = "<group>"; };
+		BF74396A270E0D9A00A38A2D /* PermissionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionViewModel.swift; sourceTree = "<group>"; };
+		BF74396C270E106B00A38A2D /* PermissionManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionManagerProtocol.swift; sourceTree = "<group>"; };
+		BF74396F270E12AE00A38A2D /* PermissionViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionViewBuilder.swift; sourceTree = "<group>"; };
+		BF743972270E217D00A38A2D /* CameraPermissionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPermissionManager.swift; sourceTree = "<group>"; };
+		BF743975270E22ED00A38A2D /* PhotosPermissionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosPermissionManager.swift; sourceTree = "<group>"; };
+		BF743978270E238A00A38A2D /* PermissionViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionViewFactory.swift; sourceTree = "<group>"; };
 		BF853D492705729B00C52CFE /* FontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
 		BF853D4B270572BE00C52CFE /* GenericValueProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericValueProtocol.swift; sourceTree = "<group>"; };
 		BF98C4F02709F53D00CCCEA2 /* GenericBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericBaseView.swift; sourceTree = "<group>"; };
@@ -133,6 +145,7 @@
 		BF1E468127023D7B00C5421B /* PermissionProject */ = {
 			isa = PBXGroup;
 			children = (
+				BF743968270E0D3C00A38A2D /* Managers */,
 				BF678ED7270B7C670087A353 /* Scenes */,
 				BF1E46B42702CA5D00C5421B /* Componets */,
 				BF1E46B82702E07F00C5421B /* BaseComponents */,
@@ -235,6 +248,8 @@
 			isa = PBXGroup;
 			children = (
 				BF678EDA270B7CD60087A353 /* PermissionViewController.swift */,
+				BF74396A270E0D9A00A38A2D /* PermissionViewModel.swift */,
+				BF74396F270E12AE00A38A2D /* PermissionViewBuilder.swift */,
 			);
 			path = Permission;
 			sourceTree = "<group>";
@@ -253,6 +268,49 @@
 				BF678EDE270B80320087A353 /* PermissionImages.swift */,
 			);
 			path = PermissionImages;
+			sourceTree = "<group>";
+		};
+		BF743968270E0D3C00A38A2D /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				BF743977270E237200A38A2D /* PermissionViewFactory */,
+				BF743974270E22DC00A38A2D /* PhotosPermissionManager */,
+				BF743971270E214400A38A2D /* CameraPermissionManager */,
+				BF743969270E0D5C00A38A2D /* PermissionProtocols */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		BF743969270E0D5C00A38A2D /* PermissionProtocols */ = {
+			isa = PBXGroup;
+			children = (
+				BF74396C270E106B00A38A2D /* PermissionManagerProtocol.swift */,
+			);
+			path = PermissionProtocols;
+			sourceTree = "<group>";
+		};
+		BF743971270E214400A38A2D /* CameraPermissionManager */ = {
+			isa = PBXGroup;
+			children = (
+				BF743972270E217D00A38A2D /* CameraPermissionManager.swift */,
+			);
+			path = CameraPermissionManager;
+			sourceTree = "<group>";
+		};
+		BF743974270E22DC00A38A2D /* PhotosPermissionManager */ = {
+			isa = PBXGroup;
+			children = (
+				BF743975270E22ED00A38A2D /* PhotosPermissionManager.swift */,
+			);
+			path = PhotosPermissionManager;
+			sourceTree = "<group>";
+		};
+		BF743977270E237200A38A2D /* PermissionViewFactory */ = {
+			isa = PBXGroup;
+			children = (
+				BF743978270E238A00A38A2D /* PermissionViewFactory.swift */,
+			);
+			path = PermissionViewFactory;
 			sourceTree = "<group>";
 		};
 		BF853D482705727C00C52CFE /* Utilities */ = {
@@ -413,14 +471,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF74396D270E106B00A38A2D /* PermissionManagerProtocol.swift in Sources */,
 				BF1E468727023D7B00C5421B /* ViewController.swift in Sources */,
 				BF40198B27058C8300EE07A6 /* ActionButtonTheme.swift in Sources */,
 				BF1E468327023D7B00C5421B /* AppDelegate.swift in Sources */,
 				BF678EDB270B7CD60087A353 /* PermissionViewController.swift in Sources */,
 				BF678ED0270B6E3B0087A353 /* LabelPackComponentData.swift in Sources */,
 				BF98C4F9270A414300CCCEA2 /* ActionModuleData.swift in Sources */,
+				BF743970270E12AE00A38A2D /* PermissionViewBuilder.swift in Sources */,
+				BF74396B270E0D9A00A38A2D /* PermissionViewModel.swift in Sources */,
 				BF40198827058C5F00EE07A6 /* ActionButtonType.swift in Sources */,
+				BF743976270E22ED00A38A2D /* PhotosPermissionManager.swift in Sources */,
 				BF98C4F4270A07F200CCCEA2 /* UIView + Extensions.swift in Sources */,
+				BF743979270E238B00A38A2D /* PermissionViewFactory.swift in Sources */,
 				BF678EDF270B80320087A353 /* PermissionImages.swift in Sources */,
 				BF678ED6270B72260087A353 /* PermissionMainViewData.swift in Sources */,
 				BF678ECE270B6E0D0087A353 /* LabelPackComponent.swift in Sources */,
@@ -431,6 +494,7 @@
 				BF1E468527023D7B00C5421B /* SceneDelegate.swift in Sources */,
 				BF853D4A2705729B00C52CFE /* FontManager.swift in Sources */,
 				BF40198627057ECA00EE07A6 /* ActionButtonData.swift in Sources */,
+				BF743973270E217D00A38A2D /* CameraPermissionManager.swift in Sources */,
 				BF1E46B72702CAA900C5421B /* ActionButton.swift in Sources */,
 				BF853D4C270572BE00C52CFE /* GenericValueProtocol.swift in Sources */,
 			);

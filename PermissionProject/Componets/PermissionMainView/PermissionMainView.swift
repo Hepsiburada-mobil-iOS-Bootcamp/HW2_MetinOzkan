@@ -72,7 +72,7 @@ class PermissionMainView: GenericBaseView<PermissionMainViewData> {
     private func setupContainerViewLayers() {
         containerView.layer.cornerRadius = 10
         containerView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
-    }  
+    }
     
     override func loadDataView() {
         super.loadDataView()
